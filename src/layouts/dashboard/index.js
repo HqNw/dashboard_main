@@ -104,6 +104,7 @@ function Dashboard() {
             </Grid>
           </Grid>
         </VuiBox>
+
         <VuiBox mb={3}>
           <Grid container spacing="18px">
             <Grid item xs={12} lg={12} xl={5}>
@@ -117,6 +118,7 @@ function Dashboard() {
             </Grid>
           </Grid>
         </VuiBox>
+
         <VuiBox mb={3}>
           <Grid container spacing={3}>
             <Grid item xs={12} lg={6} xl={7}>
@@ -125,6 +127,7 @@ function Dashboard() {
                   <VuiTypography variant="lg" color="white" fontWeight="bold" mb="5px">
                     Sales Overview
                   </VuiTypography>
+                  
                   <VuiBox display="flex" alignItems="center" mb="40px">
                     <VuiTypography variant="button" color="success" fontWeight="bold">
                       +5% more{" "}
@@ -133,6 +136,7 @@ function Dashboard() {
                       </VuiTypography>
                     </VuiTypography>
                   </VuiBox>
+
                   <VuiBox sx={{ height: "310px" }}>
                     <LineChart
                       lineChartData={lineChartDataDashboard}
@@ -142,6 +146,7 @@ function Dashboard() {
                 </VuiBox>
               </Card>
             </Grid>
+
             <Grid item xs={12} lg={6} xl={5}>
               <Card>
                 <VuiBox>

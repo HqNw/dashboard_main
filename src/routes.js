@@ -47,6 +47,8 @@ import Profile from "layouts/profile";
 import SignIn from "layouts/authentication/sign-in";
 import SignUp from "layouts/authentication/sign-up";
 
+import main from "layouts/main";
+
 // Vision UI Dashboard React icons
 import { IoRocketSharp } from "react-icons/io5";
 import { IoIosDocument } from "react-icons/io";
@@ -57,6 +59,16 @@ import { IoStatsChart } from "react-icons/io5";
 import { IoHome } from "react-icons/io5";
 
 const routes = [
+  { 
+    type: "collapse", 
+    name: "Main", 
+    key: "main",
+    route: "/main",
+    icon: <IoHome size="15px" color="inherit" />,
+    component: main,
+    noCollapse: true,
+  },
+
   {
     type: "collapse",
     name: "Dashboard",
@@ -93,6 +105,7 @@ const routes = [
     component: RTL,
     noCollapse: true,
   },
+
   { type: "title", title: "Account Pages", key: "account-pages" },
   {
     type: "collapse",
