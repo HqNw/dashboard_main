@@ -59,12 +59,13 @@ import { barChartDataDashboard } from "layouts/dashboard/data/barChartData";
 import { barChartOptionsDashboard } from "layouts/dashboard/data/barChartOptions";
 
 
+import YourComponent from "layouts/main/data/lineChartData";
+
 function main() {
   const { gradients } = colors;
   const { cardContent } = gradients;
 
   return (
-
     <DashboardLayout>
       <DashboardNavbar />
       <VuiBox py={3}>
@@ -124,13 +125,9 @@ function main() {
                       </VuiTypography>
                     </VuiTypography>
                   </VuiBox>
-
-                  <VuiBox sx={{ height: "310px" }}>
-                    <LineChart
-                      lineChartData={lineChartDataDashboard}
-                      lineChartOptions={lineChartOptionsDashboard}
-                    />
-                  </VuiBox>
+    
+                  <YourComponent />
+                  
                 </VuiBox>
               </Card>
             </Grid>
