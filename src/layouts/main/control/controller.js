@@ -38,7 +38,7 @@ const ControllerComponent = ({ serverUrl }) => {
   const handleSpeedChange = (event) => {
     const newSpeed = parseInt(event.target.value);
     setSpeed(newSpeed);
-    sendControlData({ type:"control_override", direction, speed: newSpeed });
+    sendControlData({ type:"speed_override", speed: newSpeed });
   };
 
   const sendControlData = (data) => {
@@ -118,29 +118,9 @@ const ControllerComponent = ({ serverUrl }) => {
       </Grid>
 
       <Grid item >
-      <Box sx={{ height: 300, width: 200 }}>
-          {/* <Slider
-            sx={{
-              '& input[type="range"]': {
-                WebkitAppearance: 'slider-vertical',
-              },
-            }}
-            orientation="vertical"
-            defaultValue={60}
-            aria-label="speed"
-            valueLabelDisplay="auto"
-            onKeyDown={handleSpeedChange}
-          /> */}
+      <Box sx={{ height: "100%", width: 200 }}>
+          
           <Slider defaultValue={50} aria-label="Default" valueLabelDisplay="auto" onChange={handleSpeedChange} />
-          {/* 
-          <input
-            type="range"
-            min="0"
-            max="100"
-            value={speed}
-            onChange={handleSpeedChange}
-          /> 
-          */}
           <p>Speed: {speed}</p>
         </Box>
       </Grid>

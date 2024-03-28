@@ -116,55 +116,41 @@ function main() {
               />
             </Grid>
           </Grid>
-
         </VuiBox>
-        
-        <VuiBox mb={3}>
-          <Grid container spacing={3}>
-            <Grid item xs={12} lg={6} xl={7}>
-              <Card>
-                <VuiBox sx={{ height: "100%" }}>
-                  <VuiTypography variant="lg" color="white" fontWeight="bold" mb="5px">
-                    Water Level
-                  </VuiTypography>
-                  
-                  <WaterGraph />
 
-                </VuiBox>
-              </Card>
-            </Grid>
-            
-            {/* <Grid item xs={12} lg={12} xl={5}>
-              <WelcomeMark />
-            </Grid> */}
-          
-          <VuiBox mb={3}>
-              <Card>
-              <VuiBox container>
-                <Grid container spacing={4} display='flex' flexDirection="row">
-                  <Grid item xs={12}>
-                    <VuiTypography variant="h6" align="center" >Control Panel</VuiTypography>
+        <Grid container spacing={3}>
+          <Grid item xs={12} lg={6} xl={7}>
+            <Card>
+              <VuiBox sx={{ height: "100%" }}>
+                <VuiTypography variant="lg" color="white" fontWeight="bold" mb="5px">
+                  Water Level
+                </VuiTypography>
+                <WaterGraph />
+              </VuiBox>
+            </Card>
+          </Grid>
+          <Grid item xs={12} lg={6} xl={5}>
+            <VuiBox container>
+              <VuiBox mb={3}>
+                <Grid container spacing={1}>
+                  <Grid item sx={{ height: "100%", width: 400}}>
+                    <Card>
+                      <VuiBox sx={{ height: "100%", width: "100%"}}>
+                        <VuiTypography variant="lg" color="white" fontWeight="bold" mb="5px">
+                          control panel
+                        </VuiTypography>
+                        <ControllerComponent serverUrl={SocketServerUrl} />
+                      </VuiBox>
+                    </Card>
                   </Grid>
                 </Grid>
-
-                <Grid item xs={12} lg={12} xl={10}>
-                  <ControllerComponent serverUrl={SocketServerUrl} />
-                </Grid>
-                </VuiBox>
-              </Card>
-          </VuiBox>
-          
+              </VuiBox>
+            </VuiBox>
           </Grid>
-
-          <Grid container spacing={3}>
-          
-          </Grid>
-
-        </VuiBox>
+        </Grid>
       </VuiBox>
       <Footer />
     </DashboardLayout>
-
   );
 }
 
