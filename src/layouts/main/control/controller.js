@@ -83,7 +83,7 @@ const ControllerComponent = ({ serverUrl }) => {
         </Grid>
 
         <Grid item xs={3} >
-          <VuiButton onClick={() => handleDirectionClick('right')} variant="gradient" color="info">
+          <VuiButton onClick={() => handleDirectionClick('stop')} variant="gradient" color="info">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="m31.71 15.29-6-6-1.41 1.41 4.29 4.3H17V3.41l4.29 4.29 1.41-1.41-6-6a1 1 0 0 0-1.41 0l-6 6L10.7 7.7 15 3.41V15H3.41l4.29-4.29-1.41-1.42-6 6a1 1 0 0 0 0 1.41l6 6 1.41-1.41L3.41 17H15v11.59l-4.29-4.29-1.42 1.41 6 6a1 1 0 0 0 1.41 0l6-6-1.41-1.41L17 28.59V17h11.59l-4.29 4.29 1.41 1.41 6-6a1 1 0 0 0 0-1.41z" data-name="83-Arrow"/></svg>
           </VuiButton>
         </Grid>
