@@ -52,6 +52,7 @@ import { FaShoppingCart } from "react-icons/fa";
 
 // Data
 import LineChart from "examples/Charts/LineCharts/LineChart";
+// import LineChart from "layouts/main/charts/linechart";
 import BarChart from "examples/Charts/BarCharts/BarChart";
 import { lineChartDataDashboard } from "layouts/dashboard/data/lineChartData";
 import { lineChartOptionsDashboard } from "layouts/dashboard/data/lineChartOptions";
@@ -59,18 +60,28 @@ import { barChartDataDashboard } from "layouts/dashboard/data/barChartData";
 import { barChartOptionsDashboard } from "layouts/dashboard/data/barChartOptions";
 
 
-import YourComponent from "layouts/main/data/lineChartData";
+import WaterGraph from "layouts/main/charts/lineChartData";
+import ControllerComponent from "layouts/main/control/controller";
+
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+
+import Slider from '@mui/material/Slider';
+import socketIOClient from 'socket.io-client';
+
 
 function main() {
   const { gradients } = colors;
   const { cardContent } = gradients;
+
+  const SocketServerUrl = 'ws://192.168.1.115:5002';
+
 
   return (
     <DashboardLayout>
       <DashboardNavbar />
       <VuiBox py={3}>
         <VuiBox mb={3}>
-
           <Grid container spacing={2} display='flex' flexDirection='row'>
             <Grid item xs={12} md={6} xl={3}>
               <MiniStatisticsCard
@@ -114,27 +125,35 @@ function main() {
               <Card>
                 <VuiBox sx={{ height: "100%" }}>
                   <VuiTypography variant="lg" color="white" fontWeight="bold" mb="5px">
-                    Sales Overview
+                    Water Level
                   </VuiTypography>
                   
-                  <VuiBox display="flex" alignItems="center" mb="40px">
-                    <VuiTypography variant="button" color="success" fontWeight="bold">
-                      +5% more{" "}
-                      <VuiTypography variant="button" color="text" fontWeight="regular">
-                        in 2021
-                      </VuiTypography>
-                    </VuiTypography>
-                  </VuiBox>
-    
-                  <YourComponent />
-                  
+                  <WaterGraph />
+
                 </VuiBox>
               </Card>
             </Grid>
-            <Grid item xs={12} lg={12} xl={5}>
+            
+            {/* <Grid item xs={12} lg={12} xl={5}>
               <WelcomeMark />
-            </Grid>
+            </Grid> */}
+          
+          <VuiBox mb={3}>
+              <Card>
+              <VuiBox container>
+                <Grid container spacing={4} display='flex' flexDirection="row">
+                  <Grid item xs={12}>
+                    <VuiTypography variant="h6" align="center" >Control Panel</VuiTypography>
+                  </Grid>
+                </Grid>
 
+                <Grid item xs={12} lg={12} xl={10}>
+                  <ControllerComponent serverUrl={SocketServerUrl} />
+                </Grid>
+                </VuiBox>
+              </Card>
+          </VuiBox>
+          
           </Grid>
 
           <Grid container spacing={3}>
