@@ -23,7 +23,7 @@ const water_graph = () => {
   const fetchDataFromAPI = async () => {
     try {
       let num = n;
-      let url = `http://192.168.1.115:5000/api/getreadingdata?n=${num}`;
+      let url = `http://0.0.0.0:5000/api/getreadingdata?n=${num}`;
       console.log('Fetching data from:', url);
 
       const response = await axios.get(url);

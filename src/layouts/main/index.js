@@ -74,7 +74,7 @@ function main() {
   const { gradients } = colors;
   const { cardContent } = gradients;
 
-  const SocketServerUrl = 'ws://192.168.1.115:5002';
+  const SocketServerUrl = 'ws://0.0.0.0:5002';
 
 
   return (

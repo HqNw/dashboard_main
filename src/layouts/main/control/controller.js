@@ -99,19 +99,19 @@ const ControllerComponent = ({ serverUrl }) => {
       <Grid container spacing={3} display='flex' flexDirection="row">
 
         <Grid item xs={3}>
-          <VuiButton onClick={() => handleDirectionClick('bacward')} variant="gradient" color="info">
+          <VuiButton onClick={() => handleDirectionClick('back_left')} variant="gradient" color="info">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="m18.707 6.707-1.414-1.414L7 15.586V7H5v12h12v-2H8.414L18.707 6.707z"/></svg>
           </VuiButton>
         </Grid>
 
         <Grid item xs={3}>
-          <VuiButton onClick={() => handleDirectionClick('bacward')} variant="gradient" color="info">
+          <VuiButton onClick={() => handleDirectionClick('backward')} variant="gradient" color="info">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M13 17.586V4h-2v13.586l-6.293-6.293-1.414 1.414L12 21.414l8.707-8.707-1.414-1.414L13 17.586z"/></svg>
           </VuiButton>
         </Grid>
 
         <Grid item xs={3}>
-          <VuiButton onClick={() => handleDirectionClick('bacward')} variant="gradient" color="info">
+          <VuiButton onClick={() => handleDirectionClick('back_right')} variant="gradient" color="info">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M17 15.586 6.707 5.293 5.293 6.707 15.586 17H7v2h12V7h-2v8.586z"/></svg>
           </VuiButton>
         </Grid>
