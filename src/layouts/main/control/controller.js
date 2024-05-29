@@ -93,6 +93,12 @@ const ControllerComponent = ({ serverUrl }) => {
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M11.293 4.707 17.586 11H4v2h13.586l-6.293 6.293 1.414 1.414L21.414 12l-8.707-8.707-1.414 1.414z"/></svg>
           </VuiButton>
         </Grid>
+
+        <Grid item xs={3}>
+          <VuiButton onClick={() => handleDirectionClick('mesure')} variant="gradient" color="info">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path d="M0 48C0 21.5 21.5 0 48 0H208c26.5 0 48 21.5 48 48V96H176c-8.8 0-16 7.2-16 16s7.2 16 16 16h80v64H176c-8.8 0-16 7.2-16 16s7.2 16 16 16h80v64H176c-8.8 0-16 7.2-16 16s7.2 16 16 16h80v64H176c-8.8 0-16 7.2-16 16s7.2 16 16 16h80v48c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V48z"/></svg>
+          </VuiButton>
+        </Grid>
         
       </Grid>
       {/* thrid row */}

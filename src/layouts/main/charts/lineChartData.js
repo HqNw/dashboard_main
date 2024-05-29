@@ -104,6 +104,7 @@ const water_graph = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
+
       fetchDataFromAPI();
     }, 1000);
 
